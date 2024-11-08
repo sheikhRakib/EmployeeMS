@@ -12,7 +12,9 @@ class CountryController extends Controller
      */
     public function index()
     {
-        //
+        $data['countries'] = Country::all();
+
+        return view('dashboard.country.index', $data);
     }
 
     /**

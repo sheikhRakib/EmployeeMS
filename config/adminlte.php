@@ -382,16 +382,29 @@ return [
             'icon_color' => 'red',
             'url' => '#',
         ],
+        ['header' => 'UTILITY', 'can'=>'p.*'],
         [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
+            'text' => 'Location',
+            'icon' => 'fas fa-fw fa-globe-americas',
+            // 'can' => 'manage-blog',
+            'submenu' => [
+                [
+                    'text' => 'Country',
+                    'route' => 'dashboard.country.index',
+                ],
+                [
+                    'text' => 'State',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'City',
+                    'url' => '#',
+                ],
+            ],
         ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
-        ],
+
+
+
     ],
 
     /*
@@ -430,7 +443,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

@@ -23,12 +23,11 @@ class RolesAndPermissionsSeeder extends Seeder
             ['name' => 'p.member.delete', 'displayname' => 'Permission: Delete Member'],
             ['name' => 'p.member.invite', 'displayname' => 'Permission: Invite Member'],
 
-            // Permission > Building
-            ['name' => 'p.building.*', 'displayname' => 'Permission: Full Building Access'],
-            ['name' => 'p.building.read', 'displayname' => 'Permission: Read Building'],
-            ['name' => 'p.building.create', 'displayname' => 'Permission: Create Building'],
-            ['name' => 'p.building.update', 'displayname' => 'Permission: Update Building'],
-            ['name' => 'p.building.delete', 'displayname' => 'Permission: Delete Building'],
+            // Permission > Location
+            ['name' => 'p.location.*', 'displayname' => 'Permission: Full Location Access'],
+            ['name' => 'p.location.country', 'displayname' => 'Permission: Country CRUD Access'],
+            ['name' => 'p.location.state', 'displayname' => 'Permission: State CRUD Access'],
+            ['name' => 'p.location.city', 'displayname' => 'Permission: City CRUD Access'],
         ];
 
         foreach ($permissions as $permission) {
